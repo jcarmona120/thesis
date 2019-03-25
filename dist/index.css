@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/dist/fonts/roboto/Roboto-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url("/dist/fonts/roboto/Roboto-Thin.ttf"); }
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url("/dist/fonts/roboto/Roboto-Bold.ttf"); }
+
+/*********************
+BREAKPOINTS
+*********************/
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: white; }
+
+.hide {
+  display: none; }
+
+html {
+  background: url("img/background.png") no-repeat center center fixed;
+  font-size: 62.5%;
+  color: white; }
+
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 5vh 90vh 5vh;
+  font-family: "Roboto"; }
+
+.header__title {
+  color: white; }
+
+.header {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-between;
+  align-items: baseline; }
+  .header__title {
+    font-size: 2.6rem; }
+  .header__nav--links {
+    display: flex; }
+    @media (max-width: 37.5em) {
+      .header__nav--links {
+        display: none; } }
+  .header__nav--link {
+    font-size: 1.6rem;
+    padding: 0 2rem; }
+    .header__nav--link::hover {
+      border-bottom: 2px solid white; }
+
+.hamburgerIcon {
+  height: .3rem;
+  width: 2.8rem;
+  background: white;
+  position: relative; }
+  .hamburgerIcon::before {
+    content: '';
+    background: white;
+    width: 2.8rem;
+    height: .3rem;
+    position: absolute;
+    top: -8; }
+  .hamburgerIcon::after {
+    content: '';
+    background: white;
+    width: 2.8rem;
+    height: .3rem;
+    position: absolute;
+    top: 8; }
+
+main {
+  align-self: center;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 50em) {
+    main {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; } }
+
+.hook {
+  padding: 2rem;
+  font-size: 2.8rem; }
+  @media (min-width: 50em) {
+    .hook {
+      width: 39%; } }
+  .hook__title {
+    font-size: 2.8rem;
+    padding-bottom: 1.5rem; }
+    @media (min-width: 50em) {
+      .hook__title {
+        font-size: 4.8rem; } }
+  .hook__caption {
+    font-size: 1.4rem; }
+    @media (min-width: 50em) {
+      .hook__caption {
+        font-family: "Roboto Thin";
+        font-size: 1.8rem; } }
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 80vw;
+  margin: 2rem; }
+  @media (min-width: 50em) {
+    .signup {
+      width: 32%; } }
+  .signup__title {
+    text-transform: uppercase;
+    letter-spacing: .2rem; }
+  .signup__form {
+    display: flex;
+    flex-direction: column;
+    margin: 1.6rem 0; }
+    .signup__form > input {
+      height: 4rem;
+      padding: 0 1rem;
+      color: white;
+      border: .2px solid gray;
+      background-color: rgba(0, 0, 0, 0.5); }
+      .signup__form > input:focus {
+        border: .2px solid green;
+        outline: green; }
+  .signup__terms {
+    font-family: "Roboto Thin";
+    color: #9b9b9b; }
+    .signup__terms--link {
+      display: block;
+      padding: .7rem 0; }
+
+#signup__submit {
+  color: white;
+  background-color: #2c99ed; }
+
+input[type='password'] {
+  background-image: url("img/eye.svg");
+  background-position: 90%;
+  background-repeat: no-repeat; }
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center; }
+  @media (min-width: 50em) {
+    .footer {
+      flex-direction: row; } }
+  .footer__copyright {
+    font-size: 1.1rem;
+    padding: .6rem 0; }
+    @media (min-width: 50em) {
+      .footer__copyright {
+        padding: 0;
+        font-size: 1.4rem; } }
+  .footer__nav--links {
+    display: flex;
+    font-size: 1.1rem; }
+    @media (min-width: 50em) {
+      .footer__nav--links {
+        font-size: 1.4rem; } }
+  .footer__nav--link {
+    padding: 0 2rem; }
+
+::-webkit-input-placeholder {
+  color: white;
+  padding: 0 1rem; }
+
+:-moz-placeholder {
+  color: white; }
+
+::-moz-placeholder {
+  color: white; }
+
+:-ms-input-placeholder {
+  color: white; }
